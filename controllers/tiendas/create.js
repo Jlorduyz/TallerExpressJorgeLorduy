@@ -1,31 +1,27 @@
 import Tienda from "../../models/Tienda.js";
 
-let create = async (req, res) => {
+let crear = async (req, res, next) => {
   try {
     let tienda = req.body;
-    let create = await Tienda.create(tienda);
+    let crear = await Tienda.create(tienda);
     return res.status(201).json({
-      response: create,
+      response: crear,
     });
   } catch (error) {
-    return res.status(500).json({
-      response: error,
-    });
+    next(error);
   }
 };
 
-let createAll = async (req, res) => {
+let crearVarios = async (req, res, next) => {
   try {
     let tienda = req.body;
-    let create = await Tienda.insertMany(tienda);
+    let crear = await Tienda.insertMany(tienda);
     return res.status(201).json({
-      response: create,
+      response: crear,
     });
   } catch (error) {
-    return res.status(500).json({
-      response: error,
-    });
+    next(error);
   }
 };
 
-export { create, createAll };
+export { crear, crearVarios };

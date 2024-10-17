@@ -1,19 +1,17 @@
 import Producto from "../../models/Producto.js";
 
-let todosProductos = async (req, res) => {
+let todosProductos = async (req, res, next) => {
   try {
     let todos = await Producto.find();
     return res.status(200).json({
       response: todos,
     });
   } catch (error) {
-    return res.status(500).json({
-      response: error,
-    });
+    next(error);
   }
 };
 
-let marcaProductos = async (req, res) => {
+let marcaProductos = async (req, res, next) => {
   try {
     let query = req.params.x;
     let todos = await Producto.find({ marca: query });
@@ -21,13 +19,11 @@ let marcaProductos = async (req, res) => {
       response: todos,
     });
   } catch (error) {
-    return res.status(500).json({
-      response: error,
-    });
+    next(error);
   }
 };
 
-let tipoProductos = async (req, res) => {
+let tipoProductos = async (req, res, next) => {
   try {
     let query = req.params.x;
     let todos = await Producto.find({ tipo: query });
@@ -35,9 +31,7 @@ let tipoProductos = async (req, res) => {
       response: todos,
     });
   } catch (error) {
-    return res.status(500).json({
-      response: error,
-    });
+    next(error);
   }
 };
 

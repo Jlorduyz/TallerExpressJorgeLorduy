@@ -4,14 +4,14 @@ import {
   nombreTiendas,
   direccionTiendas,
 } from "../controllers/tiendas/read.js";
-import { create, createAll } from "../controllers/tiendas/create.js";
+import { crear, crearVarios } from "../controllers/tiendas/create.js";
 
 const router = Router();
 
 router.get("/all", todasTiendas);
 router.get("/nombre/:x", nombreTiendas);
 router.get("/direccion/:x", direccionTiendas);
-router.post("/create", create);
-router.post("/createAll", createAll);
+router.post("/create", crear);
+router.post("/createAll", crearVarios);
 
 export default router;

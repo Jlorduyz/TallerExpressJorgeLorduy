@@ -1,9 +1,9 @@
-import Producto from "../../models/Producto.js";
+import Proveedor from "../../models/Proveedor.js";
 
 let crear = async (req, res, next) => {
   try {
-    let producto = req.body;
-    let crear = await Producto.create(producto);
+    let proveedor = req.body;
+    let crear = Proveedor.create(proveedor);
     return res.status(201).json({
       response: crear,
     });
@@ -13,8 +13,8 @@ let crear = async (req, res, next) => {
 };
 let crearVarios = async (req, res, next) => {
   try {
-    let producto = req.body;
-    let crear = await Producto.insertMany(producto);
+    let proveedores = req.body;
+    let crear = Proveedor.insertMany(proveedores);
     return res.status(201).json({
       response: crear,
     });

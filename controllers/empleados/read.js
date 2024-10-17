@@ -1,19 +1,17 @@
 import Empleado from "../../models/Empleado.js";
 
-let todosEmpleados = async (req, res) => {
+let todosEmpleados = async (req, res, next) => {
   try {
     let todos = await Empleado.find();
     return res.status(200).json({
       response: todos,
     });
   } catch (error) {
-    return res.status(500).json({
-      response: error,
-    });
+    next(error);
   }
 };
 
-let cargoEmpleados = async (req, res) => {
+let cargoEmpleados = async (req, res, next) => {
   try {
     let query = req.params.x;
     let todos = await Empleado.find({ cargo: query });
@@ -21,20 +19,20 @@ let cargoEmpleados = async (req, res) => {
       response: todos,
     });
   } catch (error) {
-    return res.status(500).josn({
-      response: error,
-    });
+    next(error);
   }
 };
 
-let salarioEmpleados = async (req, res) => {
+let salarioEmpleados = async (req, res, next) => {
   try {
     let query = req.params.x;
     let todos = await Empleado.find({ salario: query });
     return res.status(200).json({
       response: todos,
     });
-  } catch (error) {}
+  } catch (error) {
+    next(error);
+  }
 };
 
 export { todosEmpleados, cargoEmpleados, salarioEmpleados };
