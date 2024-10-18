@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-let collection = "tiendas";
+let coleccion = "tiendas";
 
 let schema = Schema(
   {
@@ -13,6 +13,6 @@ let schema = Schema(
   }
 );
 
-let Tienda = model(collection, schema);
+let Tienda = model(coleccion, schema);
 
 export default Tienda;
