@@ -1,9 +1,9 @@
-import Producto from "../../models/Producto.js";
+import Tienda from "../../modelos/Tienda.js";
 
 let crear = async (req, res, next) => {
   try {
-    let producto = req.body;
-    let crear = await Producto.create(producto);
+    let tienda = req.body;
+    let crear = await Tienda.create(tienda);
     return res.status(201).json({
       response: crear,
     });
@@ -11,10 +11,11 @@ let crear = async (req, res, next) => {
     next(error);
   }
 };
+
 let crearVarios = async (req, res, next) => {
   try {
-    let producto = req.body;
-    let crear = await Producto.insertMany(producto);
+    let tienda = req.body;
+    let crear = await Tienda.insertMany(tienda);
     return res.status(201).json({
       response: crear,
     });

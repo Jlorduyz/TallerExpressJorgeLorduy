@@ -1,4 +1,4 @@
-import Promocion from "../../models/Promocion.js";
+import Promocion from "../../modelos/Promocion.js";
 
 let todasPromociones = async (req, res, next) => {
   try {

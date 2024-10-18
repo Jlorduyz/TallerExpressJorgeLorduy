@@ -1,5 +1,5 @@
 import "dotenv/config.js";
-import "../../config/database.js";
+import "../../configuraciones/baseDeDatos.js";
 import Tienda from "../Tienda.js";
 
 let tiendas = [

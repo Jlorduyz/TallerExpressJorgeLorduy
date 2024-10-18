@@ -1,9 +1,9 @@
-import Promocion from "../../models/Promocion.js";
+import Empleado from "../../modelos/Empleado.js";
 
 let crear = async (req, res, next) => {
   try {
-    let promociones = req.body;
-    let crear = await Promocion.create(promociones);
+    let empleado = req.body;
+    let crear = await Empleado.create(empleado);
     return res.status(201).json({
       response: crear,
     });
@@ -11,10 +11,11 @@ let crear = async (req, res, next) => {
     next(error);
   }
 };
+
 let crearVarios = async (req, res, next) => {
   try {
-    let promociones = req.body;
-    let crear = await Promocion.insertMany(promociones);
+    let empleado = req.body;
+    let crear = await Empleado.insertMany(empleado);
     return res.status(201).json({
       response: crear,
     });

@@ -1,8 +1,8 @@
-import Empleado from "../../models/Empleado.js";
+import Producto from "../../modelos/Producto.js";
 
-let todosEmpleados = async (req, res, next) => {
+let todosProductos = async (req, res, next) => {
   try {
-    let todos = await Empleado.find();
+    let todos = await Producto.find();
     return res.status(200).json({
       response: todos,
     });
@@ -11,22 +11,10 @@ let todosEmpleados = async (req, res, next) => {
   }
 };
 
-let cargoEmpleados = async (req, res, next) => {
-  try {
-    let query = req.params.x;
-    let todos = await Empleado.find({ cargo: query });
-    return res.status(200).json({
-      response: todos,
-    });
-  } catch (error) {
-    next(error);
-  }
-};
-
-let salarioEmpleados = async (req, res, next) => {
+let marcaProductos = async (req, res, next) => {
   try {
     let query = req.params.x;
-    let todos = await Empleado.find({ salario: query });
+    let todos = await Producto.find({ marca: query });
     return res.status(200).json({
       response: todos,
     });
@@ -35,4 +23,16 @@ let salarioEmpleados = async (req, res, next) => {
   }
 };
 
-export { todosEmpleados, cargoEmpleados, salarioEmpleados };
+let tipoProductos = async (req, res, next) => {
+  try {
+    let query = req.params.x;
+    let todos = await Producto.find({ tipo: query });
+    return res.status(200).json({
+      response: todos,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+export { todosProductos, marcaProductos, tipoProductos };

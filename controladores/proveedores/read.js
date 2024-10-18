@@ -1,4 +1,4 @@
-import Proveedor from "../../models/Proveedor.js";
+import Proveedor from "../../modelos/Proveedor.js";
 
 let todosProveedores = async (req, res, next) => {
   try {

@@ -6,5 +6,3 @@ const not_found_handler = (req, res, next) => {
 };
 
 export default not_found_handler;
-
-//middleware para controlar errores generales de no encontrado (404)

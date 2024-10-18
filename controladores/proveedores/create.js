@@ -1,9 +1,9 @@
-import Empleado from "../../models/Empleado.js";
+import Proveedor from "../../modelos/Proveedor.js";
 
 let crear = async (req, res, next) => {
   try {
-    let empleado = req.body;
-    let crear = await Empleado.create(empleado);
+    let proveedor = req.body;
+    let crear = Proveedor.create(proveedor);
     return res.status(201).json({
       response: crear,
     });
@@ -11,11 +11,10 @@ let crear = async (req, res, next) => {
     next(error);
   }
 };
-
 let crearVarios = async (req, res, next) => {
   try {
-    let empleado = req.body;
-    let crear = await Empleado.insertMany(empleado);
+    let proveedores = req.body;
+    let crear = Proveedor.insertMany(proveedores);
     return res.status(201).json({
       response: crear,
     });
