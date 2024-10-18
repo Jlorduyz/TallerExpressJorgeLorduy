@@ -3,8 +3,8 @@ import {
   todasTiendas,
   nombreTiendas,
   direccionTiendas,
-} from "../controladores/tiendas/read.js";
-import { crear, crearVarios } from "../controladores/tiendas/create.js";
+} from "../controladores/tiendas/leer.js";
+import { crear, crearVarios } from "../controladores/tiendas/crear.js";
 
 const enrutador = Router();
 

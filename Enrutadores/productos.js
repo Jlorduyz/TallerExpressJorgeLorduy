@@ -3,8 +3,8 @@ import {
   todosProductos,
   marcaProductos,
   tipoProductos,
-} from "../controladores/productos/read.js";
-import { crear, crearVarios } from "../controladores/productos/create.js";
+} from "../controladores/productos/leer.js";
+import { crear, crearVarios } from "../controladores/productos/crear.js";
 
 const enrutador = Router();
 

@@ -4,8 +4,8 @@ import {
   nombreProveedores,
   marcasProveedores,
   horasProveedores,
-} from "../controladores/proveedores/read.js";
-import { crear, crearVarios } from "../controladores/proveedores/create.js";
+} from "../controladores/proveedores/leer.js";
+import { crear, crearVarios } from "../controladores/proveedores/crear.js";
 
 const enrutador = Router();
 

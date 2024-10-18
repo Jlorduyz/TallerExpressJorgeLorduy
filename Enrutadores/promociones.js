@@ -3,8 +3,8 @@ import {
   todasPromociones,
   marcaPromociones,
   supermercadosPromociones,
-} from "../controladores/promociones/read.js";
-import { crear, crearVarios } from "../controladores/promociones/create.js";
+} from "../controladores/promociones/leer.js";
+import { crear, crearVarios } from "../controladores/promociones/crear.js";
 
 const enrutador = Router();
 

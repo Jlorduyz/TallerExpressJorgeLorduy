@@ -3,8 +3,8 @@ import {
   todosEmpleados,
   cargoEmpleados,
   salarioEmpleados,
-} from "../controladores/empleados/read.js";
-import { crear, crearVarios } from "../controladores/empleados/create.js";
+} from "../controladores/empleados/leer.js";
+import { crear, crearVarios } from "../controladores/empleados/crear.js";
 
 const router = Router();
 
