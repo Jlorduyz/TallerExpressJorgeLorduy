@@ -6,12 +6,12 @@ import {
 } from "../controladores/empleados/leer.js";
 import { crear, crearVarios } from "../controladores/empleados/crear.js";
 
-const router = Router();
+const enrutador = Router();
 
-router.get("/all", todosEmpleados);
-router.get("/cargo/:x", cargoEmpleados);
-router.get("/salario/:x", salarioEmpleados);
-router.post("/create", crear);
-router.post("/createALL", crearVarios);
+enrutador.get("/todos", todosEmpleados);
+enrutador.get("/cargo/:x", cargoEmpleados);
+enrutador.get("/salario/:x", salarioEmpleados);
+enrutador.post("/crear", crear);
+enrutador.post("/crearVarios", crearVarios);
 
-export default router;
+export default enrutador;

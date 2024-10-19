@@ -9,11 +9,11 @@ import { crear, crearVarios } from "../controladores/proveedores/crear.js";
 
 const enrutador = Router();
 
-enrutador.get("/all", todosProveedores);
+enrutador.get("/todos", todosProveedores);
 enrutador.get("/nombre/:x", nombreProveedores);
 enrutador.get("/marcasSuministradas/:x", marcasProveedores);
 enrutador.get("/horasEntrega/:x", horasProveedores);
-enrutador.post("/create", crear);
-enrutador.post("/createAll", crearVarios);
+enrutador.post("/crear", crear);
+enrutador.post("/crearVarios", crearVarios);
 
 export default enrutador;

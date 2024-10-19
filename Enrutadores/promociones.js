@@ -8,10 +8,10 @@ import { crear, crearVarios } from "../controladores/promociones/crear.js";
 
 const enrutador = Router();
 
-enrutador.get("/all", todasPromociones);
+enrutador.get("/todos", todasPromociones);
 enrutador.get("/marca/:x", marcaPromociones);
 enrutador.get("/supermercados/:x", supermercadosPromociones);
-enrutador.post("/create", crear);
-enrutador.post("/createAll", crearVarios);
+enrutador.post("/crear", crear);
+enrutador.post("/crearVarios", crearVarios);
 
 export default enrutador;
